@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Sign up</h1>
+        <input  id="name"  type="text" placeholder="Enter your username"/>
+         <input id="email" type="email" placeholder="Enter your email"/>
+          <input id="pass" type="password" placeholder="Enter your password"/>
+           <button onclick="alert()">Log in</button>
+           <h5 id="output"></h5>
+    </div>
+</body>
+<script>
+        function alert(){
+        var a=document.getElementById("name").value;
+        var b=document.getElementById("email").value;
+        var c=document.getElementById("pass").value;
+        var e=document.getElementById("output"); 
+
+        if(a!=""&&b!=""&&c!=""){
+            e.innerHTML="Log in successful";
+            e.style.color="green";
+        }else{
+            e.innerHTML="Please fill all spaces";
+            e.style.color="red";
+        }
+    }
+</script>
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,1);
+        border-radius: 10px;
+        gap: 10px;
+    }
+    input{
+        height: 40px;
+        width: 220px;
+    }
+    button{
+        width: 200px;
+        height: 40px;
+        background-color: lightblue;
+        border-radius: 10px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(-45deg,lightblue,lightgreen,yellow,orange, aqua);
+        background-size: 200% 200%;
+        animation:good 5s ease infinite;
+    }
+    @keyframes good {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 50% 100%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+</style>
+</html>
